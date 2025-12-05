@@ -168,20 +168,22 @@ Global variables use 1499 bytes (73%) of dynamic memory, leaving 549 bytes for l
 #define MY_CALLSIGN_PADDED "DEBUG  "
 #else
 // Put your callsigne below and remove the "///" in front to activate.
-#define MY_CALLSIGN "G8RDI"               // <----- Add your callsign here or enable line below, replacing G8RDI!  If you don´t want the LCD to show your callsign, enable the line "uSDR+" below.
+#define MY_CALLSIGN "KN6MHE"               // <----- Add your callsign here or enable line below, replacing G8RDI!  If you don´t want the LCD to show your callsign, enable the line "uSDR+" below.
 
-#define MY_CALLSIGN_PADDED "G8RDI  "      // <----- Also add your callsign here BUT keep the 2 spaces at the end!
+#define MY_CALLSIGN_PADDED "KN6MHE  "      // <----- Also add your callsign here BUT keep the 2 spaces at the end!
 /// Disable below line if using your own callsign by adding // in front.
 //#define MY_CALLSIGN_PADDED "uSDR+  "    // Ensure two spaces at end of heading and that it is under 7 characters (including the 2 spaces), or this program may not work correctly.
 
 //#define MY_PREFIX ""  // No prefix, use this line by removing the //, add below to replica line.
 #define MY_PREFIX ""    // Add visiting country prefix here
 
-#define MY_NAME "ROB"   // <---- *** ADD YOUR NAME HERE FOR CW MESSAGES
+#define MY_NAME "ST"   // <---- *** ADD YOUR NAME HERE FOR CW MESSAGES
 #endif
-#define CALLSIGN_LENGTH 5       // Change length to match your callsign but remember the LCD isn't very wide!
+#define CALLSIGN_LENGTH 6       // Change length to match your callsign but remember the LCD isn't very wide!
 
 // *** MEMORY LIMITATION OF ATMEGA328 *** This means you may have to mix and match functions option defines.  CAT requires considerable memory, so use only if needed.
+
+#define SWAP_ROTARY    1
 
 // If your dial goes the wrong way, change SWAP_ROTARY
 #if defined(RED_CORNERS) || defined(BLACK_BRICK)
@@ -295,7 +297,7 @@ Global variables use 1499 bytes (73%) of dynamic memory, leaving 549 bytes for l
 #ifdef MY_RED_CORNERS
 #define F_XTAL  27001400
 #else
-#define F_XTAL  27000000   // !!!! SET YOUR EXACT XTAL FREQ OR 27000000 !!!!  27MHz usually on black bricks, Red Buttons (27001400 is my calibration offset!!!) and White buttons versions
+#define F_XTAL  25000000   // !!!! SET YOUR EXACT XTAL FREQ OR 27000000 !!!!  27MHz usually on black bricks, Red Buttons (27001400 is my calibration offset!!!) and White buttons versions
 #endif
 #endif
 
@@ -7156,4 +7158,5 @@ int8_t updateMode() // GW8RDI mod - relocated to function
   return 1;
 }
 */
+
 
